@@ -58,6 +58,7 @@
       <div class="hidden md:flex gap-8">
         <a href="#home" class="hover:text-primary transition-colors font-medium">Home</a>
         <a href="#about" class="hover:text-primary transition-colors font-medium">About</a>
+        <a href="#people" class="hover:text-primary transition-colors font-medium">Our People</a>
         <a href="#services" class="hover:text-primary transition-colors font-medium">Services</a>
         <a href="#expertise" class="hover:text-primary transition-colors font-medium">Expertise</a>
         <a href="#contact" class="hover:text-primary transition-colors font-medium">Contact</a>
@@ -109,8 +110,8 @@
         </p>
         <div class="grid grid-cols-3 gap-6 mt-10 text-center">
           <div>
-            <div class="text-3xl font-bold text-primary">20+</div>
-            <div class="text-sm text-gray-400">Years Combined Experience</div>
+            <div class="text-3xl font-bold text-primary">25+</div>
+            <div class="text-sm text-gray-400">Years Industry Experience</div>
           </div>
           <div>
             <div class="text-3xl font-bold text-primary">50+</div>
@@ -125,8 +126,66 @@
     </div>
   </section>
 
+  <!-- ✅ NEW: Our People Section -->
+  <section id="people" class="py-20 px-4">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-16 text-white">Our People</h3>
+      <div class="max-w-4xl mx-auto bg-metal/40 backdrop-blur-sm p-10 rounded-xl border border-metal/70 border-glow">
+        <div class="grid md:grid-cols-3 gap-10 items-center">
+          <div class="md:col-span-1 flex justify-center">
+            <div class="w-[200px] h-[200px] rounded-full overflow-hidden border-4 border-primary/30 shadow-lg">
+              <img src="https://via.placeholder.com/200/1a1a2e/ffffff?text=Andy+Egan" alt="Andy Egan - Director" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <div class="md:col-span-2">
+            <h4 class="text-2xl font-bold text-white mb-1">Andy Egan</h4>
+            <p class="text-primary font-semibold mb-4">Director • Egans Group Ltd</p>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              A customer‑focused, profit‑driven leader with over 25 years of experience in the aerospace and aviation industry, Andy founded Egans Group Ltd to bring world‑class technical leadership and innovation to aviation organisations globally.
+            </p>
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              Before establishing Egans Group, Andy spent 25 years at easyJet, one of Europe’s largest and most innovative airlines, holding senior technology and leadership roles across operations, systems, and digital transformation. His career has been defined by delivering complex, high‑impact projects on time, within budget, and with measurable operational and commercial value.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-gray-300 space-y-5">
+          <h5 class="text-lg font-semibold text-white">Key Experience & Achievements</h5>
+          <ul class="space-y-3 pl-5 list-disc list-inside">
+            <li><strong>Electronic Flight Bag (EFB) Programme</strong> — Delivered full fleet‑wide implementation including electronic charts, flight performance calculations, and digital documentation — driving major efficiency gains, fuel savings, and operational cost reduction.</li>
+            <li><strong>Core Operational Systems</strong> — Led successful design, migration, and go‑live of critical operational and crewing systems with zero disruption to live operations.</li>
+            <li><strong>HR & Enterprise Systems</strong> — Managed high‑pressure server and system migration projects, delivering against aggressive timelines while keeping all stakeholders fully aligned and informed.</li>
+            <li><strong>Software & Digital Strategy</strong> — Deep expertise in SAP, enterprise architecture, systems integration, and digital transformation across airline operations.</li>
+          </ul>
+
+          <h5 class="text-lg font-semibold text-white mt-6">Expertise</h5>
+          <div class="grid md:grid-cols-2 gap-3 pl-2">
+            <div>✅ Aviation Technology Strategy & Roadmapping</div>
+            <div>✅ Avionics & Flight Operations Systems</div>
+            <div>✅ Digital Transformation & IT Modernisation</div>
+            <div>✅ Programme & Project Management</div>
+            <div>✅ Systems Integration & Migration</div>
+            <div>✅ Operational Efficiency & Cost Optimisation</div>
+            <div>✅ Regulatory Compliance & Governance</div>
+            <div>✅ Stakeholder Leadership & Change Management</div>
+          </div>
+
+          <p class="mt-6 italic text-gray-400">
+            “Andy’s system knowledge and business acumen are exceptional. He combines deep technical understanding with commercial insight and the ability to deliver complex programmes under pressure.” — Industry Peer Recommendation
+          </p>
+
+          <div class="mt-4">
+            <a href="https://uk.linkedin.com/in/andyegan" target="_blank" class="inline-flex items-center gap-2 text-primary hover:underline">
+              <i class="fa fa-linkedin-square"></i> View full LinkedIn profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services Section -->
-  <section id="services" class="py-20 px-4">
+  <section id="services" class="py-20 px-4 bg-dark/40">
     <div class="container mx-auto">
       <h3 class="text-3xl font-bold text-center mb-16 text-white">Our Services</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -172,7 +231,7 @@
   </section>
 
   <!-- Expertise Section -->
-  <section id="expertise" class="py-20 px-4 bg-dark/40">
+  <section id="expertise" class="py-20 px-4">
     <div class="container mx-auto">
       <h3 class="text-3xl font-bold text-center mb-12 text-white">Areas of Expertise</h3>
       <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-gray-300">
@@ -209,77 +268,4 @@
           </li>
           <li class="flex items-start gap-3">
             <i class="fa fa-check-circle text-primary mt-1"></i>
-            <span>Airline & MRO Technology Optimisation</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-4">
-    <div class="container mx-auto max-w-4xl">
-      <h3 class="text-3xl font-bold text-center mb-12 text-white">Get in Touch</h3>
-      <div class="grid md:grid-cols-2 gap-12 bg-metal/30 p-10 rounded-2xl border border-metal/60 border-glow">
-        <div>
-          <h4 class="text-xl font-semibold mb-4 text-white">Contact Information</h4>
-          <p class="text-gray-300 mb-6">
-            Whether you need strategic advice, technical support, or project delivery, we are ready to help.
-          </p>
-          <div class="space-y-4">
-            <div class="flex items-center gap-4">
-              <i class="fa fa-user text-primary text-xl"></i>
-              <div>
-                <p class="text-sm text-gray-400">Key Contact</p>
-                <p>Andy Egan</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-4">
-              <i class="fa fa-phone text-primary text-xl"></i>
-              <div>
-                <p class="text-sm text-gray-400">Phone</p>
-                <p>+44 (0)7432 692 493</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-4">
-              <i class="fa fa-globe text-primary text-xl"></i>
-              <div>
-                <p class="text-sm text-gray-400">Website</p>
-                <p>egansgroup.github.io</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <form class="space-y-4">
-            <div>
-              <label class="block text-sm mb-1 text-gray-300">Name</label>
-              <input type="text" class="w-full bg-dark/60 border border-metal px-4 py-2 rounded-lg focus:border-primary focus:outline-none">
-            </div>
-            <div>
-              <label class="block text-sm mb-1 text-gray-300">Email</label>
-              <input type="email" class="w-full bg-dark/60 border border-metal px-4 py-2 rounded-lg focus:border-primary focus:outline-none">
-            </div>
-            <div>
-              <label class="block text-sm mb-1 text-gray-300">Message</label>
-              <textarea rows="4" class="w-full bg-dark/60 border border-metal px-4 py-2 rounded-lg focus:border-primary focus:outline-none"></textarea>
-            </div>
-            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-semibold transition">
-              Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-dark/80 border-t border-metal/50 py-8 px-4 text-center text-gray-400 text-sm">
-    <div class="container mx-auto">
-      <img src="logobasic.png" alt="Egans Group Ltd" class="h-10 mx-auto mb-4">
-      <p>© 2025 Egans Group Ltd. All rights reserved. | Aviation Technology Consultancy</p>
-    </div>
-  </footer>
-
-</body>
-</html>
+            <span>Airline &
