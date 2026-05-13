@@ -1,178 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Egans Group Ltd | Aviation Technology Consultancy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b1a2a;
-  color: #e6edf3;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #08121c;
-}
-
-header img {
-  height: 50px;
-}
-
-nav a {
-  color: #ccc;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #00d4ff;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 40px;
-  flex-wrap: wrap;
-}
-
-.hero-text {
-  max-width: 500px;
-}
-
-.hero h1 {
-  font-size: 42px;
-}
-
-.hero p {
-  margin: 20px 0;
-  color: #aaa;
-}
-
-.button {
-  padding: 12px 20px;
-  margin-right: 10px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.primary {
-  background: #d4af37;
-  color: black;
-}
-
-.secondary {
-  background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-}
-
-.section {
-  padding: 60px 40px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #112233;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1;
-  min-width: 250px;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #08121c;
-  margin-top: 40px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egans Group Ltd | Aviation Technology Consultancy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .bg-dark-gradient {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      }
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(90deg, #0099ff, #00ccff);
+      }
+      .border-glow {
+        box-shadow: 0 0 15px rgba(0, 153, 255, 0.2);
+      }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0099ff',
+            secondary: '#0f3460',
+            dark: '#12121f',
+            metal: '#2a2a3c'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+<body class="bg-dark-gradient text-gray-200 font-sans min-h-screen">
 
-<body>
-
-<header>
-  <img src="logo.jpg" alt="Egans Group Logo">
-  <nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-dark/80 backdrop-blur-md z-50 border-b border-metal/50">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="logobasic.png" alt="Egans Group Ltd Logo" class="h-14">
+        <div>
+          <h1 class="text-xl font-bold text-white">EGANS GROUP LTD</h1>
+          <p class="text-xs text-primary/80">Aviation Technology Consultancy</p>
+        </div>
+      </div>
+      <div class="hidden md:flex gap-8">
+        <a href="#home" class="hover:text-primary transition-colors font-medium">Home</a>
+        <a href="#about" class="hover:text-primary transition-colors font-medium">About</a>
+        <a href="#services" class="hover:text-primary transition-colors font-medium">Services</a>
+        <a href="#expertise" class="hover:text-primary transition-colors font-medium">Expertise</a>
+        <a href="#contact" class="hover:text-primary transition-colors font-medium">Contact</a>
+      </div>
+      <button class="md:hidden text-white text-2xl">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
   </nav>
-</header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>EGANS GROUP LTD</h1>
-    <p>Aviation Technology Consultancy delivering innovative solutions with precision and expertise.</p>
-    <button class="button primary">Our Services</button>
-    <button class="button secondary">Contact Us</button>
-  </div>
-
-  <img src="logo.jpg" style="max-width:300px;">
-</section>
-
-<section class="section" id="about">
-  <h2>About Us</h2>
-  <p>
-    Egans Group Ltd provides independent aviation technology consultancy to support organisations
-    in solving complex technical challenges, improving performance and embracing innovation.
-  </p>
-</section>
-
-<section class="section" id="services">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Technology Strategy</h3>
-      <p>Helping organisations define and implement aviation technology strategies.</p>
+  <!-- Hero Section -->
+  <section id="home" class="pt-32 pb-20 px-4">
+    <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-white">
+          Precision <span class="text-gradient">Aviation</span> Technology
+        </h2>
+        <p class="mt-6 text-lg text-gray-300 max-w-xl">
+          Delivering innovative, high‑tech solutions with engineering excellence and deep industry expertise. We partner with global aviation organisations to solve complex challenges, optimise performance, and embrace next‑generation innovation.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#services" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold transition border-glow">
+            Our Services
+          </a>
+          <a href="#contact" class="border border-primary/50 hover:border-primary text-primary hover:bg-primary/10 px-8 py-3 rounded-lg font-semibold transition">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+      <div class="order-1 md:order-2 flex justify-center">
+        <img src="logobasic.png" alt="Egans Group Logo" class="w-[280px] md:w-[380px] drop-shadow-[0_0_30px_rgba(0,153,255,0.2)]">
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Systems Integration</h3>
-      <p>Expert support integrating aviation systems efficiently and reliably.</p>
+  <!-- About Section -->
+  <section id="about" class="py-20 px-4 bg-dark/40">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-12 text-white">About Us</h3>
+      <div class="max-w-3xl mx-auto text-center text-gray-300 space-y-5">
+        <p>
+          Founded in 2025, Egans Group Ltd is an independent specialist consultancy dedicated exclusively to aviation technology. We bridge the gap between advanced engineering, digital innovation, and operational reality.
+        </p>
+        <p>
+          Our team combines decades of experience in aerospace systems, avionics, software integration, and regulatory compliance. We work with airlines, MROs, manufacturers, and aviation authorities to deliver safe, scalable, and future‑ready technology solutions.
+        </p>
+        <p>
+          We don’t just advise — we partner. From strategy through implementation and optimisation, we bring precision, clarity, and technical excellence to every project.
+        </p>
+        <div class="grid grid-cols-3 gap-6 mt-10 text-center">
+          <div>
+            <div class="text-3xl font-bold text-primary">20+</div>
+            <div class="text-sm text-gray-400">Years Combined Experience</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-primary">50+</div>
+            <div class="text-sm text-gray-400">Projects Delivered</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-primary">Global</div>
+            <div class="text-sm text-gray-400">Client Reach</div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Technical Consultancy</h3>
-      <p>Providing specialist aviation technology advice across platforms.</p>
+  <!-- Services Section -->
+  <section id="services" class="py-20 px-4">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-16 text-white">Our Services</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Service 1 -->
+        <div class="bg-metal/40 backdrop-blur-sm p-8 rounded-xl border border-metal/70 hover:border-primary/40 transition hover:-translate-y-1 hover:border-glow">
+          <i class="fa fa-sitemap text-primary text-3xl mb-4"></i>
+          <h4 class="text-xl font-semibold mb-3 text-white">Technology Strategy</h4>
+          <p class="text-gray-300 text-sm">
+            Defining clear, actionable roadmaps aligned with your operational goals. We help you adopt digital transformation, new aircraft technologies, and next‑gen infrastructure safely and cost‑effectively.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-metal/40 backdrop-blur-sm p-8 rounded-xl border border-metal/70 hover:border-primary/40 transition hover:-translate-y-1 hover:border-glow">
+          <i class="fa fa-cogs text-primary text-3xl mb-4"></i>
+          <h4 class="text-xl font-semibold mb-3 text-white">Systems Integration</h4>
+          <p class="text-gray-300 text-sm">
+            Expert integration of avionics, flight operations, maintenance, and data systems. We ensure seamless interoperability, compliance, and minimal operational disruption.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-metal/40 backdrop-blur-sm p-8 rounded-xl border border-metal/70 hover:border-primary/40 transition hover:-translate-y-1 hover:border-glow">
+          <i class="fa fa-lightbulb-o text-primary text-3xl mb-4"></i>
+          <h4 class="text-xl font-semibold mb-3 text-white">Technical Consultancy</h4>
+          <p class="text-gray-300 text-sm">
+            Specialist advice across avionics, software, cybersecurity, and aircraft systems. From concept to certification, we provide clarity and confidence in every technical decision.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-metal/40 backdrop-blur-sm p-8 rounded-xl border border-metal/70 hover:border-primary/40 transition hover:-translate-y-1 hover:border-glow">
+          <i class="fa fa-line-chart text-primary text-3xl mb-4"></i>
+          <h4 class="text-xl font-semibold mb-3 text-white">Performance Improvement</h4>
+          <p class="text-gray-300 text-sm">
+            Optimising reliability, efficiency, and cost‑effectiveness. We analyse operations, implement data‑driven improvements, and modernise legacy systems for long‑term value.
+          </p>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Performance Improvement</h3>
-      <p>Optimising operations and improving overall system performance.</p>
+  <!-- Expertise Section -->
+  <section id="expertise" class="py-20 px-4 bg-dark/40">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-12 text-white">Areas of Expertise</h3>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-gray-300">
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <i class="fa fa-check-circle text-primary mt-1"></i>
+            <span>Avionics & Aircraft Systems Engineering</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa fa-check-circle text-primary mt-1"></i>
+            <span>Digital Aviation & IoT Solutions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa fa-check-circle text-primary mt-1"></i>
+            <span>Regulatory Compliance & Certification Support</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa fa-check-circle text-primary mt-1"></i>
+            <span>Cybersecurity for Aviation Infrastructure</span>
+          </li>
+        </ul>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <i class="fa fa-check-circle text-primary mt-1"></i>
+            <span>Fleet Modernisation & Retrofit Programmes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa fa-check-circle text-primary mt-1"></i>
+            <span>Data Analytics & Operational Intelligence</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa fa-check-circle text-primary mt-1"></i>
+            <span>Software & Hardware Lifecycle Management</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa fa-check-circle text-primary mt-1"></i>
+            <span>Airline & MRO Technology Optimisation</span>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="contact">
-  <h2>Contact</h2>
-  <p><strong>Key Contact:</strong> Andy Egan</p>
-  <p><strong>Phone:</strong> 0044 7432 692 493</p>
-</section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-4">
+    <div class="container mx-auto max-w-4xl">
+      <h3 class="text-3xl font-bold text-center mb-12 text-white">Get in Touch</h3>
+      <div class="grid md:grid-cols-2 gap-12 bg-metal/30 p-10 rounded-2xl border border-metal/60 border-glow">
+        <div>
+          <h4 class="text-xl font-semibold mb-4 text-white">Contact Information</h4>
+          <p class="text-gray-300 mb-6">
+            Whether you need strategic advice, technical support, or project delivery, we are ready to help.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <i class="fa fa-user text-primary text-xl"></i>
+              <div>
+                <p class="text-sm text-gray-400">Key Contact</p>
+                <p>Andy Egan</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <i class="fa fa-phone text-primary text-xl"></i>
+              <div>
+                <p class="text-sm text-gray-400">Phone</p>
+                <p>+44 (0)7432 692 493</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <i class="fa fa-globe text-primary text-xl"></i>
+              <div>
+                <p class="text-sm text-gray-400">Website</p>
+                <p>egansgroup.github.io</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form class="space-y-4">
+            <div>
+              <label class="block text-sm mb-1 text-gray-300">Name</label>
+              <input type="text" class="w-full bg-dark/60 border border-metal px-4 py-2 rounded-lg focus:border-primary focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-sm mb-1 text-gray-300">Email</label>
+              <input type="email" class="w-full bg-dark/60 border border-metal px-4 py-2 rounded-lg focus:border-primary focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-sm mb-1 text-gray-300">Message</label>
+              <textarea rows="4" class="w-full bg-dark/60 border border-metal px-4 py-2 rounded-lg focus:border-primary focus:outline-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-lg font-semibold transition">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 Egans Group Ltd</p>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-dark/80 border-t border-metal/50 py-8 px-4 text-center text-gray-400 text-sm">
+    <div class="container mx-auto">
+      <img src="logobasic.png" alt="Egans Group Ltd" class="h-10 mx-auto mb-4">
+      <p>© 2025 Egans Group Ltd. All rights reserved. | Aviation Technology Consultancy</p>
+    </div>
+  </footer>
 
 </body>
 </html>
